@@ -35,7 +35,6 @@ public class UserRestController {
         User user3 = new User("Alejandra s ","Lopez");
 
         List<User> users = Arrays.asList(user,user1,user2,user3);
-
         return users;
 
     }
