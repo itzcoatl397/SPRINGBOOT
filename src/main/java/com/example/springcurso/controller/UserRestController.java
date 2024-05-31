@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 @RequestMapping("/api")
@@ -30,16 +27,15 @@ public class UserRestController {
 
     @GetMapping("/list")
     public List<User> list(){
-        List<User> usuarios = new ArrayList<>();
+
         User user = new User("Gerardo ","Maldonado");
         User user1 = new User("Diana ","Maldonado");
         User user2 = new User("Ramon ","Maldonado");
+        User user3 = new User("Alejandra ","Lopez");
 
-        usuarios.add(user);
-        usuarios.add(user1);
-        usuarios.add(user2);
+        List<User> users = Arrays.asList(user,user1,user2,user3);
 
-        return usuarios;
+        return users;
 
     }
 
