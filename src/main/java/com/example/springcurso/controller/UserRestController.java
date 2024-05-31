@@ -25,6 +25,7 @@ public class UserRestController {
         return userDto;
     }
 
+    // otra  ruta
     @GetMapping("/list")
     public List<User> list(){
 
