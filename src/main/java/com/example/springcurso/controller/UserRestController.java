@@ -31,7 +31,7 @@ public class UserRestController {
         User user = new User("Gerardo ","Maldonado");
         User user1 = new User("Diana ","Maldonado");
         User user2 = new User("Ramon ","Maldonado");
-        User user3 = new User("Alejandra ","Lopez");
+        User user3 = new User("Alejandra s ","Lopez");
 
         List<User> users = Arrays.asList(user,user1,user2,user3);
 
