@@ -20,7 +20,7 @@ public class UserRestController {
 
         UserDto userDto = new UserDto();
 
-        User user = new User("Gerardo Maldonado","Maldonado");
+         User user = new User("Gerardo Maldonado","Maldonado");
          userDto.setUser(user);
          userDto.setTitle("Hola Mundo");
         return userDto;
