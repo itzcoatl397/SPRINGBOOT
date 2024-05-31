@@ -19,7 +19,7 @@ public class UserRestController {
 
         UserDto userDto = new UserDto();
 
-         User user = new User("Gerardo Maldonado","Maldonado");
+         User user = new User("Gerardo Maldonado","Maldonado","gera@gmail.com");
          userDto.setUser(user);
          userDto.setTitle("Hola Mundo");
         return userDto;
@@ -29,10 +29,10 @@ public class UserRestController {
     @GetMapping("/list")
     public List<User> list(){
 
-        User user = new User("Gerardo ","Maldonado");
-        User user1 = new User("Diana ","Maldonado");
-        User user2 = new User("Ramon ","Maldonado");
-        User user3 = new User("Alejandra s ","Lopez");
+        User user = new User("Gerardo ","Maldonado","itzco@gmail.com");
+        User user1 = new User("Diana ","Maldonado","1234@gmail.com");
+        User user2 = new User("Ramon ","Maldonado","ramon@gmail.com");
+        User user3 = new User("Alejandra s ","Lopez","alejandra@gmail.com");
 
         List<User> users = Arrays.asList(user,user1,user2,user3);
         return users;

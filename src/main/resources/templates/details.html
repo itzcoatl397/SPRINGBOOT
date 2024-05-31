@@ -5,8 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-
+<p></p>
 <h1 th:text="${users.name}"></h1>
+<li      th:if="${(users.email != null)}"            th:text="${users.email}" th: > <ul th:text="${users.email}"></ul>
+
+</li>
 
 
 
