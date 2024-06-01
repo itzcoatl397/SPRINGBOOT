@@ -8,9 +8,9 @@
 
 <div th:if="${users.isEmpty()}">No tiene eleementos</div>
 
-<ul th:each="nombre :${users}">
-    <h2 th:text="${nombre.name.concat(nombre.lastName)}"></h2>
-    <ol th:text="${nombre.email}"></ol>
+<ul th:each="user :${users}">
+    <h2 th:text="${user.name.concat(user.lastName)}"></h2>
+    <ol th:text="${user.email}"></ol>
 
 </ul>
 </body>

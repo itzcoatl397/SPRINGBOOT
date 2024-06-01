@@ -23,13 +23,14 @@ public class UserController {
     @GetMapping("/list-user")
     public String listUser(ModelMap model){
 
-       List<User> users = new ArrayList<>();
-       User user1 = new User("Gerardo","maldonado","itzcoatl3b@gmail.com");
-        User user2= new User("Luis","Palacios","luis@gmail.com");
-
-
-       users.add(user1);
-       users.add(user2);
+       List<User> users = Arrays.asList(
+               new User("Diana", "Fonseca", "dianafonseca@gmail.com "),
+               new User("Mario", "Aguilar", "aguilarmario@gmail.com"),
+               new User("Pedro", "Lopez", "pedrolopez@gmail.com"),
+               new User("Maria", "Mariano", "marano@gmail.com"),
+               new User("Jose", "Jose", "jose@gmail.com"),
+               new  User("sofia","mayorga","sofia@gmail.com")
+       );
        model.addAttribute("users",users);
         return "list";
 
