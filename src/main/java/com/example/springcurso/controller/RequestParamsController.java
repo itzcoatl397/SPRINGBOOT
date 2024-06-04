@@ -42,7 +42,7 @@ public class RequestParamsController {
 
     // Path Variable
 
-    @GetMapping("/baz/{message}/update/{id}")
+      @GetMapping("/baz/{message}/update/{id}")
 
     public  ParamsDto baz(@PathVariable String message,@PathVariable Integer id){
         ParamsDto param = new ParamsDto();
