@@ -4,10 +4,7 @@ package com.example.springcurso.controller;
 import com.example.springcurso.models.dto.ParamsDto;
 import com.example.springcurso.models.dto.ParamsMixDto;
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Locale;
 
@@ -29,14 +26,20 @@ public class RequestParamsController {
         param.setCode(code);
         return param;
     }
+
+    // Uitilando HttpServletRequest
     @GetMapping("/bar2")
     public ParamsMixDto  bar2(HttpServletRequest requestparam) {
-
         ParamsMixDto param = new ParamsMixDto();
         param.setMessage(requestparam.getParameter("message"));
         param.setCode(Integer.parseInt(requestparam.getParameter("code").strip()));
         return param;
     }
+
+    // Path Variable
+
+
+
 
 
 
