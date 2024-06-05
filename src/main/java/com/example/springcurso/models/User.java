@@ -3,21 +3,21 @@ package com.example.springcurso.models;
 public class User {
 
     private String name;
-    private String lastName;
+    private String lastname;
 
     private String email;
 
     public User() {
     }
 
-    public User(String name, String lastName) {
+    public User(String name, String lastname) {
         this.name = name;
-        this.lastName = lastName;
+        this.lastname = lastname;
     }
 
-    public User(String name, String lastName, String email) {
+    public User(String name, String lastname, String email) {
         this.name = name;
-        this.lastName = lastName;
+        this.lastname = lastname;
         this.email = email;
     }
 
@@ -29,12 +29,12 @@ public class User {
         this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getEmail() {
