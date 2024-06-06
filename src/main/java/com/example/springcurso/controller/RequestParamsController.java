@@ -1,6 +1,7 @@
 package com.example.springcurso.controller;
 
 
+import com.example.springcurso.models.Product;
 import com.example.springcurso.models.User;
 import com.example.springcurso.models.dto.ParamsDto;
 import com.example.springcurso.models.dto.ParamsMixDto;
@@ -9,13 +10,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 @RestController
 @RequestMapping("/api/params")
 public class RequestParamsController {
+    public List<Object> products = new ArrayList<>();
 
     private static final Logger log = LoggerFactory.getLogger(RequestParamsController.class);
 
@@ -64,10 +64,18 @@ public class RequestParamsController {
     }
     @PostMapping("/create")
     public User create(@RequestBody  User users){
-        
 
-
-
+        users.setName(users.getName().toUpperCase(Locale.ENGLISH));
         return  users;
     }
+
+    @PostMapping("/create/product")
+    public Product createProduct(@RequestBody Product product){
+        product.setName(product.getName().toUpperCase(Locale.ENGLISH));
+        return product;
+    }
+
+
+
+
 }
